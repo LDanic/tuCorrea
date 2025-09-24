@@ -61,7 +61,7 @@ export function Contact() {
         </motion.div>
 
         {/* Store Locations */}
-        <div className="grid md:grid-cols-2 gap-12 mb-16">
+        <div className="store-card grid md:grid-cols-2 gap-12 mb-16">
           {stores.map((store, index) => (
             <motion.div
               key={store.id}
@@ -70,7 +70,7 @@ export function Contact() {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               className="bg-gray-900 border-2 border-gray-700 rounded-2xl overflow-hidden shadow-lg"
             >
-              <div className="aspect-video overflow-hidden">
+              <div className="img-wrapper aspect-video overflow-hidden">
                 <img
                   src={store.image || "/placeholder.svg"}
                   alt={`${store.name} storefront`}
